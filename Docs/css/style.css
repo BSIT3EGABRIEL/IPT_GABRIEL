@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+body {
+    background-color: #1b1b1b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1920px;
+    margin: 20px auto; /* Add margin for spacing around the container */
+}
+
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.profile h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.profile h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.languages {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.languages span {
+    background-color: #ffbc42;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.skills-bar h3 {
+    margin-bottom: 20px;
+}
+
+.skills-bar {
+    
+    width: 100%;
+    margin-top: 80px;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-bar {
+    background-color: #4e4e4e;
+    border-radius: 25px;
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.progress.html {
+    background-color: #ffbc42;
+}
+
+.progress.css {
+    background-color: #42a5f5;
+}
+
+.progress.js {
+    background-color: #66bb6a;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+.content {
+    width: 100%; 
+    padding: 20px;
+    margin-left: 20px; 
+    margin-top: 100px;
+}
+
+.hero {
+    position: relative;
+    padding-top: 280px;
+    padding-left: 100px;
+    text-align: left;
+    height: 700px;
+    overflow: hidden; 
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+.hero h1, .hero p, button {
+    position: relative;
+    z-index: 1; 
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.profile-image {
+    max-width: 1300px;
+    width: 550px;
+    margin-right: 0px; 
+    height: auto;
+    position: relative;
+    left: 615px;
+    bottom: 345px;
+    filter: drop-shadow(0px 0px 12px white);
+}
+
+button {
+    background-color: #ffbc42;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5a72b;
+}
+
+.stats {
+    margin-top: 30px;
+}
+
+.stats h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.languages-chart {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.chart {
+    text-align: center;
+}
+
+.circular-chart {
+    width: 80px;
+    height: 80px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+.english .circle {
+    stroke: #ffbc42;
+}
+
+.filipino .circle {
+    stroke: #42a5f5;
+}
+
+.cebuano .circle {
+    stroke: #66bb6a;
+}
+
+.percentage {
+    font-size: 0.5em;
+    text-anchor: middle;
+    fill: #fff;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.info {
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 140px;
+    max-width: 1920px;
+}
+
+main h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.portfolio-item p {
+    margin-top: 0px;
+    font-size: 14px;
+    color: #ddd;
+}
+.info p {
+    margin-top: -50px;
+    margin-bottom: 1000px;
+    font-size: 30px;
+    color: #ddd;
+    width: 70%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.fade-in:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.fade-in:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
