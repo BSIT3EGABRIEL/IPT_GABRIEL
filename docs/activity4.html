@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1920px;
+    margin: 20px auto; 
+}
+
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.profile h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.profile h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.languages {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.languages span {
+    background-color: #ffbc42;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.skills-bar h3 {
+    margin-bottom: 20px;
+}
+
+.skills-bar {
+    
+    width: 100%;
+    margin-top: 80px;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skill label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-bar {
+    background-color: #4e4e4e;
+    border-radius: 25px;
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.progress.html {
+    background-color: #ffbc42;
+}
+
+.progress.css {
+    background-color: #42a5f5;
+}
+
+.progress.js {
+    background-color: #66bb6a;
+    margin-bottom: 100px;
+}
+.content {
+    width: 100%; 
+    padding: 20px;
+    margin-left: 20px; 
+    margin-top: 100px;
+}
+
+.hero {
+    position: relative;
+    padding-top: 280px;
+    padding-left: 100px;
+    text-align: left;
+    height: 700px;
+    overflow: hidden; 
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+.hero h1, .hero p, button {
+    position: relative;
+    z-index: 1; 
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #cccccc;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.profile-image {
+    max-width: 1300px;
+    width: 550px;
+    margin-right: 0px; 
+    height: auto;
+    position: relative;
+    left: 615px;
+    bottom: 345px;
+    filter: drop-shadow(0px 0px 12px white);
+}
+
+button {
+    background-color: #ffbc42;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5a72b;
+}
+
+.stats {
+    margin-top: 30px;
+}
+
+.stats h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.languages-chart {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.chart {
+    text-align: center;
+}
+
+.circular-chart {
+    width: 80px;
+    height: 80px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+.english .circle {
+    stroke: #ffbc42;
+}
+
+.filipino .circle {
+    stroke: #42a5f5;
+}
+
+.cebuano .circle {
+    stroke: #66bb6a;
+}
+
+.percentage {
+    font-size: 0.5em;
+    text-anchor: middle;
+    fill: #fff;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+    </style>
+
+
+
+
+</head>
+<body>
+ 
+
+    <div class="container">
+       
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="img/profile1.jpg" alt="Profile Image">
+                <h1>Christian Dave S. Gabriel</h1>
+                <h2>Web Designer</h2>
+               
+            <div class="languages-chart">
+                <div class="chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart english">
+                        <path class="circle-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <text x="18" y="20.35" class="percentage">75%</text>
+                    </svg>
+                    <p>English</p>
+                </div>
+                <div class="chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart filipino">
+                        <path class="circle-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="circle" stroke-dasharray="95, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <text x="18" y="20.35" class="percentage">95%</text>
+                    </svg>
+                    <p>Filipino</p>
+                </div>
+                <div class="chart">
+                    <svg viewBox="0 0 36 36" class="circular-chart cebuano">
+                        <path class="circle-bg" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="circle" stroke-dasharray="10, 100" d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <text x="18" y="20.35" class="percentage">10%</text>
+                    </svg>
+                    <p>Cebuano</p>
+                </div>
+            </div>
+               
+            </div>
+            <!-- Skill Progress -->
+            <div class="skills-bar">
+                <h3>Statistics</h3>
+                <div class="skill">
+                    <label for="html">HTML</label>
+                    <div class="progress-bar">
+                        <div class="progress html" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <label for="css">CSS</label>
+                    <div class="progress-bar">
+                        <div class="progress css" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <label for="js">JavaScript</label>
+                    <div class="progress-bar">
+                        <div class="progress js" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Discover my Amazing 
+                        <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programming World!</h1>
+                        <button >Explore Now!</button>
+                </div>
+                <img src="img/background.png" alt="Full Body Image" class="profile-image">
+            </section>
+
+   </div>       
+   
+</body>
+</html>
