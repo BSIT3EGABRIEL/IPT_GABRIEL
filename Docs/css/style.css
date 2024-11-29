@@ -22,7 +22,7 @@ body {
     display: flex;
     width: 90%;
     max-width: 1920px;
-    margin: 20px auto; /* Add margin for spacing around the container */
+    margin: 20px auto; 
 }
 
 .sidebar {
@@ -263,15 +263,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
 .info {
     margin-top: 20px;
     padding: 20px;
@@ -286,9 +277,9 @@ button:hover {
     max-width: 1920px;
 }
 
-main h2 {
-    font-size: 30px;
-    margin-bottom: 50px;
+.info h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
 
@@ -323,13 +314,12 @@ main h2 {
 }
 .info p {
     margin-top: -50px;
-    margin-bottom: 1000px;
+    margin-bottom: 100px;
     font-size: 30px;
     color: #ddd;
     width: 70%;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-/* Fade-in Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -354,3 +344,139 @@ main h2 {
         transform: translateY(0);
     }
 }
+
+  
+ 
+  .slideshow {
+    position: relative;
+    height:100%;
+    width: 100%;
+    margin-left: 400px;
+    margin-bottom: 200px;
+    
+  }
+  .slideshow img {
+    position: absolute;
+    width: 1100px;
+    height: auto;
+    border: solid;
+    border-width: 2px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 2px 4px rgba(255, 255, 255, 0.08);
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 1s ease-in-out;
+  }
+  .slideshow img:first-child {
+    opacity: 1;
+  }
+  .slideshow img:nth-child(2) {
+    animation: slideshow 15s infinite;
+    animation-delay: 4s;
+  }
+  .slideshow img:nth-child(3) {
+    animation: slideshow 15s infinite;
+    animation-delay: 8s;
+  }
+  .slideshow img:nth-child(4) {
+    animation: slideshow 15s infinite;
+    animation-delay: 12s;
+  }
+ 
+   /*slideshow*/
+  @keyframes slideshow {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+    }
+
+    .myproject h1{
+        position: absolute;
+        top: 3050px;
+        left: 750px;
+        font-size: 60px;
+
+    }
+
+.card {
+    max-width: 70%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+
+  }
+  
+  .card a {
+    text-decoration: none
+  }
+  
+  .content {
+    padding: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  .image img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    background-color: rgb(239, 205, 255);
+  }
+  
+  .title {
+    color: #111827;
+    font-size: 2rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    
+  }
+  
+  .desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    padding-right: 50px;
+    padding-bottom: 40px;
+  }
+  
+  #social-entity {
+    font-size: 30px;
+    position: fixed;
+    text-align: center ;
+    padding: 10px;
+    z-index: 10;
+    top: 50%;
+    left: 0%;
+    width: 69px;
+  }
+  .fa-twitter:hover {
+    color: #17a2ff;
+  }
+ 
+  .fa-instagram:hover {
+    background: linear-gradient(
+      to left bottom, #405DE6, #5B51D8,
+      #833AB4, #C13584, #E1306C, 
+      #FD1D1D, #F56040, #F77737, 
+      #FCAF45, #FFDC80);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  
+.fa-facebook:hover {
+    color: #1877F2; 
+  }
+  
